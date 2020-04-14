@@ -31,23 +31,3 @@ fetch(endPoint)
   });
 
 
-/**
-	let key = '8f657d4bd948c3e6c1aeef5fa5210115';
-	let endPoint = 'https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID='+key;
-	fetch(endPoint)
-		.then(res => {
-			if(res.status !== 200){
-				console.log('Sorry an Error Ocured: ', res.status);
-				return;
-			}
-			return res.json();
-		})
-		.then( data => {
-				console.log(data);
-		})
-		.catch( error => {
-			console.log('Fetch Error: ', error);
-		});
-
-
-* */

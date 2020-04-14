@@ -20,7 +20,7 @@ function weatherBalloon( city = 'Yaounde' ) {
 // browser refresh
 window.addEventListener("DOMContentLoaded", () => {
     if('geolocation' in navigator) {
-        navigator.geolocation.getCurrentPosition(showPosition);
+        // navigator.geolocation.getCurrentPosition(showPosition);
     }
     // using cities names to search weather information
      weatherBalloon('Bamenda');

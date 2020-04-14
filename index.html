@@ -7,53 +7,54 @@
   <meta name="description" content="Weather Application, get detail information about your cities">
   <meta name="keywords" content="Weather App, javascipt, fetch api, open weather api">
   <meta name="author" content="Ayeah Godlove">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="img/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
   <title>Current Weather</title>
+  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" sizes="192x192"  href="img/icons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="96x96" href="img/icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
   <link rel="manifest" href="/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="img/icons/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
 </head>
 <body>
     <header id="header">
         <h1>WeatherApp</h1>
         <div class="form-group">
-            <input type="search" name="search" id="search" placeholder="Enter Location and press Enter..." />
+            <label for="search"></label>
+            <input type="search" name="search" data-search id="search" placeholder="Enter Location and press Enter..." />
             <!-- <button type="submit" id="searchBtn"><i class="fas fa-search fa-2x"></i></button> -->
         </div>
     </header>
-    <section  class="ground"> 
-        <div id="weather">
-            <div id="location"></div>
-            <div id="icon"></div>
-            <div id="description"></div>
-            <h1 id="temp"></h1>
+    <main  class="ground"> 
+        <section id="weather">
+            <div id="location" data-location></div>
+            <div id="icon" data-icon></div>
+            <div id="description" data-description></div>
+            <h1 id="temp" data-temperature></h1>
             <div id="details">
                 <div class="items flex-item">
                     <h4>Humidity</h4>
-                    <p id="humidity"></p>
+                    <p id="humidity" data-humidity></p>
                 </div>
                 <div class="items flex-item">
                     <h4>Pressure</h4>
-                    <p id="pressure"></p>
+                    <p id="pressure" data-pressure></p>
                 </div>
                 <div id="remove" class="optional flex-item">
                     <h4>Sea Level</h4>
-                    <p id="seaLevel"></p>
+                    <p id="seaLevel" data-sea-level></p>
                 </div>
                 <div id="throw" class="optional flex-item">
                     <h4>Ground Level</h4>
-                    <p id="groundLevel"></p>
+                    <p id="groundLevel" data-ground-level></p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
   
- <script type="module" src="js/main.js"></script>
  <script src="https://kit.fontawesome.com/5602556044.js" crossorigin="anonymous"></script>
+ <script type="module" src="js/main.js"></script>
 </body>
 </html>
